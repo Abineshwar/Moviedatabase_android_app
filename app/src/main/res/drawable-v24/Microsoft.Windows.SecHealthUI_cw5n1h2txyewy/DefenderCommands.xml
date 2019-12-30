@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="DefenderCommandSet_en-us">
+    <AppName> Windows Defender Antivirus </AppName>
+    <Example> Scan my computer </Example>
+
+    <Command Name="scanMyComputer">
+      <Example> Scan my Computer </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> scan [my] computer </ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified"> have {builtin:AppName} scan [my] computer </ListenFor>
+      <Feedback> Scanning your computer </Feedback>
+      <VoiceCommandService Target="CortanaViewModel"/>
+    </Command>
+
+    <Command Name="protectFolder">
+      <Example> Protect My Documents </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> protect [my] {folder}</ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified"> have {builtin:AppName} protect [my] {folder}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> protect {folder}</ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified"> have {builtin:AppName} protect {folder}</ListenFor>
+      <Feedback> Attempting to protect {folder}</Feedback>
+      <VoiceCommandService Target="CortanaViewModel"/>
+    </Command>
+
+    <Command Name="launch">
+      <Example> Launch Windows Security Health Center </Example>
+      <ListenFor RequireAppName="ExplicitlySpecified">launch {builtin:AppName}</ListenFor>
+      <Feedback> Launching Windows Defender Security Center</Feedback>
+      <VoiceCommandService Target="CortanaViewModel"/>
+    </Command>
+
+    <PhraseList Label="folder">
+      <Item>Documents</Item>
+      <Item>Pictures</Item>
+      <Item>Videos</Item>
+      <Item>Music</Item>
+      <Item>Desktop</Item>
+      <Item>Favorites</Item>
+      <Item>Contacts</Item>
+      <Item>Links</Item>
+      <Item>Searches</Item>
+      <Item>Saved Games</Item>
+    </PhraseList>
+
+  </CommandSet>
+</VoiceCommands>

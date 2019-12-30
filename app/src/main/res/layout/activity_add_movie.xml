@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMovieActivity">
+
+    <EditText
+        android:id="@+id/et_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/et_name"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:maxLength="50" />
+
+    <TextView
+        android:id="@+id/tv_description1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/et_name1"
+        android:layout_marginTop="95dp"
+        android:contentDescription="@string/tv_description"
+        android:text="Description:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="327dp"
+        android:layout_height="218dp"
+        android:layout_alignTop="@+id/tv_description1"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/mt_description"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:maxLength="1000" />
+
+    <TextView
+        android:id="@+id/tv_genre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="225dp"
+        android:layout_marginStart="36dp"
+        android:contentDescription="@string/tv_genre"
+        android:text="Genre:"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/tv_genre1"
+        android:layout_marginStart="90dp" />
+
+    <TextView
+        android:id="@+id/tv_rating1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_genre1"
+        android:layout_marginBottom="190dp"
+        android:contentDescription="@string/tv_rating"
+        android:text="Rating:"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spinner1"
+        android:layout_alignTop="@+id/tv_rating1"
+        android:max="5"
+        android:progress="1" />
+
+    <TextView
+        android:id="@+id/tv_seekbarvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tv_rating1"
+        android:layout_marginEnd="51dp"
+        android:contentDescription="@string/tv_seekbarvalue"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/et_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_genre1"
+        android:layout_marginBottom="129dp"
+        android:contentDescription="@string/et_year"
+        android:ems="10"
+        android:hint="Year"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <EditText
+        android:id="@+id/et_imdb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_genre1"
+        android:layout_marginBottom="73dp"
+        android:contentDescription="@string/et_imdb"
+        android:ems="10"
+        android:hint="IMDB"
+        android:inputType="textWebEmailAddress"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/b_addmovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:contentDescription="@string/b_addmovie"
+        android:text="Add Movie" />
+
+
+</RelativeLayout>

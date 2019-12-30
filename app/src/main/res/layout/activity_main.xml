@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/b_add"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:contentDescription="@string/b_add"
+        android:text="Add Movie"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/b_edit"
+        android:layout_width="221dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="174dp"
+        android:contentDescription="@string/b_edit"
+        android:text="Edit"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/b_delete"
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/b_delete"
+        android:text="Delete Movie"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/b_year"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="178dp"
+        android:contentDescription="@string/b_year"
+        android:text="Show List by Year"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/b_rating"
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="97dp"
+        android:contentDescription="@string/b_rating"
+        android:text="Show List by Rating"
+        android:textAllCaps="false" />
+</RelativeLayout>
